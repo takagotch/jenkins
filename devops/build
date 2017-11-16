@@ -1,0 +1,8 @@
+#!/bin/bash
+export VBOX_USER_HOME=/var/lib/jenkins/VirtualBox\ VNs
+export VAGRANT_HOME=/var/lib/jenkins/.vagrant.d
+cd ${WORKSPACE}
+bundle update
+bundle exec barks
+bundle exec berks update
+bunlde exec kitchen test
