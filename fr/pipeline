@@ -1,0 +1,16 @@
+node {
+  stage 'ansible'
+  build 'exec-ansible'
+  stage 'serverspec'
+  build 'exec-serverspec'
+}
+
+node {
+  stage 'ansible'
+  build job: 'exec-ansible', parmeters: [[$class: 'StringParments Value', name: 'ENVIRONMENT', value: "${ENVIRONMENT}"]]
+  stage 'serverspec'
+  build 'exec-serverspec'
+}
+
+
+
