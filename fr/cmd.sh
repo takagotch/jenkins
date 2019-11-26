@@ -45,6 +45,34 @@ cd /tmp/ansible-playbook ansible-playbook -i $(ENVIRONMENT) site.yml --diff
 cd /tmp/ansible-playbook ansible-playbook -i production site.yml --diff
 curl 192.168.33.10
 
+//
+ls -l
+cat README.md
+
+//
+/bin/sh -xe /tmp/hudsonxxx.sh
+ls -l
+cat README.md
+
+/bin/sh -xe /tmp/tkyxxx.sh
+ls -l
+cat README.md
+
+ansible-playbook -i inventory/development site.yml
+
+ansible-playbbok -i inventory/development site.yml
+
+sudo chmod 400 ~jenkins/.ssh/config
+
+cd /usr/local/serverspec
+rake -T
+
+rake spec
+
+
+git clone  https://github.com/tky/ansible.git
+cd ansible/roles/nginx/templates/
+vi roles/nginx/templates/index.html.j2
 
 
 

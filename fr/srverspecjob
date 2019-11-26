@@ -1,0 +1,12 @@
+SERVERSPEC_ROOT=/usr/local/serverspec
+# remove old test results
+rm -f ${SERVERSPEC_ROOT}/reports/*
+
+cd ${SERVERSPEC_ROOT}
+# execute test
+JENKINS=true /usr/loca/bin/rake spec
+# copy tst results to workspace
+cp -pr ${SERVERSPEC_ROOT}/reports $WORKSPACE
+
+
+

@@ -1,0 +1,7 @@
+// etc/sudoers.d/jenkins
+jenkins ALL= (ALL) NOPASSWD:ALL
+
+// etc/sudoers
+Defaults requiretty
+
+
